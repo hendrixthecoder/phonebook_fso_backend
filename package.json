@@ -4,6 +4,8 @@
   "description": "To test things i am learning with node",
   "main": "index.js",
   "scripts": {
+    "build:ui":"rm -rf dist && cd ../frontend && npm run build && cp -r dist ../backend",
+    "deploy:full":"npm run build:ui && git add . && git commit -m uibuild && git push",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "nodemon index.js"
@@ -20,6 +22,7 @@
   "dependencies": {
     "axios": "^1.4.0",
     "cors": "^2.8.5",
+    "dotenv": "^16.1.4",
     "express": "^4.18.2",
     "morgan": "^1.10.0"
   }

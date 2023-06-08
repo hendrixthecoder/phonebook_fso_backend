@@ -1,2 +1,2 @@
-# phonebook_fso_backend
+# Node/Express backend for Phonebook Ap
 Backend for Phonebook App created as part of FSO course project
