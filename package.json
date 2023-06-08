@@ -1,0 +1,26 @@
+{
+  "name": "learn-node",
+  "version": "1.0.0",
+  "description": "To test things i am learning with node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "haha",
+    "bitch!"
+  ],
+  "author": "Johnbull Biobele Glad",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  }
+}
