@@ -9,8 +9,24 @@ mongoose.connect(url)
 
 
 const contactSchema = new mongoose.Schema({
-  name: String,
-  number: Number
+  name: {
+    type: String,
+    minLength: [3, 'Name field must not be less than 3 characters'],
+    required: true
+  },
+  number: {
+    type: String,
+    minLength: [8, 'Number field must not be less than 8 characters'],
+    required: true, 
+    validate: {
+      validator: validateNumber = (value) => {
+        const index = value.indexOf('-')
+        if(index === 2 || index === 3) return true;
+        return false
+      },
+      message: "Number field must be in the format '01-2345678' or '012-345678'"
+    }
+  }
 })
 
 contactSchema.set('toJSON', {
